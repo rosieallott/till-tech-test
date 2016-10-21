@@ -1,5 +1,5 @@
 function Order(orderItemClass) {
-    this.orderItemClass = orderItemClass || OrderItem;
+    this.orderItemClass = OrderItem;
 }
 
 Order.prototype = {

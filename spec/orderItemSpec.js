@@ -10,16 +10,19 @@ describe("OrderItem", function(){
     it("should have a null cost property initially", function(){
       expect(item.cost).toEqual(null);
     });
+    it("#findCost function should update cost property if valid item", function(){
+      expect(item.itemCost()).toEqual(4.75);
+    });
   });
 
   describe("#isValidItem function", function(){
     it("should check it is a valid item", function(){
       item = new OrderItem("Cafe Latte");
-      expect(item.isValidItem()).toEqual(true);
+      expect(item._isValidItem()).toEqual(true);
     });
     it("should check it is a valid item", function(){
       item = new OrderItem("not an item");
-      expect(item.isValidItem()).toEqual(false);
+      expect(item._isValidItem()).toEqual(false);
     });
   });
 });
